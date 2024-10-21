@@ -8,7 +8,7 @@ Script used in "Network inference applicable to both synchronous and desynchrono
 - couopl_inf_cm.py: circle-map-based coupling inference
 - coupl_inf_naive.py: naive coupling inference 
 
-## daata
+## data
 Data used in "Network inference applicable to both synchronous and desynchronous systems from oscillatory". 
 All data are synthetic data.
 - mat_nointer.npy: coupling strength matrix of clock cell network with no inter-group interaction 
