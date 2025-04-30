@@ -32,7 +32,7 @@ def G_whitenoise(x, t, sigma):
     N = round(len(x))
     return np.identity(N)*sigma
 
-
+path_to_output_file = "../output_clock_cell/simulation_clock_cell.npy" # Path to save the result
 
 K0, Kself0=0.01, 0.9 # coupling strength and self-coupling strength.
 n0 = 5.0

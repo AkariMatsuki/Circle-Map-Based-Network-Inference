@@ -83,29 +83,29 @@ def couple_inf_naive(x, dt):
 
 
 ######### Load phase data ########
-file_path_phase = [file_path_to_phase_data]
+file_path_phase = "../data/phase_demo.npy" # Path to the phase data file
 phase = np.load(file_path_phase)
 ##################################
 
 
 
 ########## 結合推定 ###########
-tau = 0.1 #sampling_interval_of_phase_data
+tau = 0.01 #sampling_interval_of_phase_data
 omega, b, sigma, alpha = couple_inf_naive(phase, tau)
 #############################
 
 
 ######## save inference results #######
-file_path_b = [file_path_to_inferred_coupling_stregnths]
+file_path_b = "../output/inf_b_naive.npy" # Path to save the coupling strength
 np.save(file_path_b, b)
 
-file_path_omega = [file_path_to_inferred_natural_freqs]
+file_path_omega = "../output/inf_omega_naive.npy" # Path to save the natural frequency
 np.save(file_path_omega, omega)
 
-file_path_sigma = [file_path_to_inferred_noise_stregnths]
+file_path_sigma = "../output/inf_sigma_naive.npy" # Path to save the noise strength
 np.save(file_path_sigma, sigma)
 
-file_path_alpha = [file_path_to_inferred_alpha]
+file_path_alpha = "../output/inf_alpha_naive.npy"
 np.save(file_path_alpha, alpha)
 
 

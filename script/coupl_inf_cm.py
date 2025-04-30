@@ -1,8 +1,6 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
 import sys
-
-
 import scipy
 
 
@@ -101,27 +99,27 @@ def couple_inf_cm(x, dt):
 
 
 ######### Load phase data ########
-file_path_phase = [file_path_to_phase_data]
+file_path_phase = "../data/phase_demo.npy" # Path to the phase data file
 phase = np.load(file_path_phase)
 ##################################
 
 ########## Coupling inference ###############
-tau = 0.01 #sampling_interval_of_phase_data
+tau = 0.01 # sampling_interval_of_phase_data
 omega, b, sigma, alpha = couple_inf_cm(phase, tau)
 #################################
 
 
 ######## save inference results #######
-file_path_b = [file_path_to_inferred_coupling_stregnths]
+file_path_b = "../output/inf_b_proposed.npy" # Path to save the coupling matrix
 np.save(file_path_b, b)
 
-file_path_omega = [file_path_to_inferred_natural_freqs]
+file_path_omega = "../output/inf_omega_proposed.npy" # Path to save the natural frequencies
 np.save(file_path_omega, omega)
 
-file_path_sigma = [file_path_to_inferred_noise_stregnths]
+file_path_sigma = "../output/inf_sigma_proposed.npy" # Path to save the noise strengths
 np.save(file_path_sigma, sigma)
 
-file_path_alpha = [file_path_to_inferred_alpha]
+file_path_alpha = "../output/inf_alpha_proposed.npy" # Path to save the alpha value
 np.save(file_path_alpha, alpha)
 ########################################
 
