@@ -4,9 +4,10 @@ Network inference from oscillatory signals based on circle map
 ## script
 Script used in "Network inference applicable to both synchronous and desynchronous systems from oscillatory"
 - brusselator_sim.py: generate the synthetic data based on the Brusselator model.
-- clock_cell_sim.py: generate synthetic data based on clock cell model (Locke et al BMC systems biolo, 2008)
+- clock_cell_sim.py: generate synthetic data based on clock cell model (Locke et al., BMC systems biolo, 2008)
 - couopl_inf_cm.py: circle-map-based coupling inference
-- coupl_inf_naive.py: naive coupling inference 
+- coupl_inf_naive.py: naive coupling inference
+- ccm_kuramoto.R: coupling inference by Convergent Cross Mapping (Sugihara et al., Sicence, 2012)
 
 ## data
 Data used in "Network inference applicable to both synchronous and desynchronous systems from oscillatory". 
